@@ -213,7 +213,7 @@ $line-height-sm: 1.5 !default;
 $border-width: 1px !default;
 $border-color: $gray-300 !default;
 
-$border-radius: 0.25rem !default;
+$border-radius: 0.9875rem !default;
 $border-radius-lg: 0.3rem !default;
 $border-radius-sm: 0.2rem !default;
 
@@ -289,7 +289,7 @@ $display3-weight: 300 !default;
 $display4-weight: 300 !default;
 $display-line-height: $headings-line-height !default;
 
-$lead-font-size: $font-size-base * 1.25 !default;
+$lead-font-size: $font-size-base * 1.125 !default;
 $lead-font-weight: 300 !default;
 
 $small-font-size: 80% !default;
@@ -1054,7 +1054,7 @@ $breadcrumb-font-size: null !default;
 
 $breadcrumb-padding-y: 0.75rem !default;
 $breadcrumb-padding-x: 1rem !default;
-$breadcrumb-item-padding: 0.5rem !default;
+$breadcrumb-item-padding: 1.5rem !default;
 
 $breadcrumb-margin-bottom: 1rem !default;
 
