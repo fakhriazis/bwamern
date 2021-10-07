@@ -11,6 +11,7 @@
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
+        <%- include('../../partials/message.ejs') %>
         <!-- Page Heading -->
         <h1 class="h3 mb-4 text-gray-800">category</h1>
         <!-- End Heading -->
@@ -68,4 +69,16 @@
   </div>
 </div>
 
-<%- include('../../partials/js.ejs') %>
+<%- include('add_modal.ejs') %> <%- include('edit_modal.ejs') %> <%-
+include('../../partials/js.ejs') %>
+
+<script>
+  $("#dataTable").on("click", ".button-update", function () {
+    let id = $(this).data("id");
+    let name = $(this).data("name");
+    //console.log(id + name);
+    $("#edit-modal").modal("show");
+    $(".id").val(id);
+    $(".name").val(name);
+  });
+</script>
