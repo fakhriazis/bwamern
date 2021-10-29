@@ -11,10 +11,10 @@ const featureSchema = new mongoose.Schema({
     required: true,
   },
   imageUrl: {
-    type: string,
+    type: String,
     required: true,
   },
-  ItemId: {
+  itemId: {
     type: ObjectId,
     ref: "Item",
   },
