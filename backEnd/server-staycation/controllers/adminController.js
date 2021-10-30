@@ -345,10 +345,12 @@ module.exports = {
       const alertMesaage = req.flash("alertMessage");
       const alertStatus = req.flash("alertStatus");
       const alert = { message: alertMesaage, status: alertStatus };
+      const feature = await Feature.find({ itemId: itemId });
       res.render("admin/item/detail_item/view_detail_item", {
         title: "Staycation | Detail Item",
         alert,
         itemId,
+        feature,
       });
     } catch (error) {
       // console.log(error);
