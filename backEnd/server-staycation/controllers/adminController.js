@@ -16,10 +16,15 @@ module.exports = {
       const alertMesaage = req.flash("alertMessage");
       const alertStatus = req.flash("alertStatus");
       const alert = { message: alertMesaage, status: alertStatus };
-      res.render("index", {
-        alert,
-        title: "Staycation | Login",
-      });
+
+      if (req.session.user == null || req.session.user == undefined){
+        res.render("index", {
+          alert,
+          title: "Staycation | Login",
+        });
+      }else{
+          res.redirect('/admin/dashboard');
+      }
     } catch (error) {
       res.redirect("/admin/signin");
     }
@@ -41,6 +46,11 @@ module.exports = {
         req.flash('alertMessage', 'Password yang anda masukan tidak cocok!!');
         req.flash('alertStatus', 'danger');
         return res.redirect('/admin/signin');
+      }
+
+      req.session.user = {
+        id: user.id,
+        username: user.username
       }
 
       res.redirect('/admin/dashboard');
