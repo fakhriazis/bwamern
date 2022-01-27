@@ -8,7 +8,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 //import mongoose
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://127.0.0.1:27017/db_staycation"), {
+mongoose.connect("mongodb+srv://fakhribashiri:froyo123@cluster0.aek7z.mongodb.net/db_staycation?retryWrites=true&w=majority"), {
   useNewUrlParser: true,
   //useCreateIndex: true,
   //useFindAndModify: true,
